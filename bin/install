@@ -19,7 +19,7 @@ readonly toolname="svu"
 install() {
     local -r os=$(get_os)
     local -r arch=$(get_arch)
-    local -r filename="${toolname}_${ASDF_INSTALL_VERSION}_{${os}_${arch}.tar.gz"
+    local -r filename="${toolname}_${ASDF_INSTALL_VERSION}_${os}_${arch}.tar.gz"
     local -r download_pkg="${ASDF_DOWNLOAD_PATH}/${filename}"
 
     echo "Extracting ${toolname} from tar archive"
