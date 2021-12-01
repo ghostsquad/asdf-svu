@@ -13,8 +13,8 @@ source "$(dirname $0)/../lib/utils.sh"
 : ${ASDF_INSTALL_PATH?}
 : ${ASDF_DOWNLOAD_PATH?}
 
-readonly repository="go-task/task"
-readonly toolname="task"
+readonly repository="caarlos0/svu"
+readonly toolname="svu"
 
 install() {
     local -r os=$(get_os)
