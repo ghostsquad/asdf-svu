@@ -2,6 +2,8 @@ name: Test
 
 on:
   push:
+    branches:
+    - main
     paths-ignore:
       - '**.md'
       - 'LICENSE'
@@ -11,6 +13,10 @@ on:
       - 'LICENSE'
   schedule:
     - cron: "0 0 * * 5"
+
+concurrency:
+  group: ${{ github.ref_name }}
+  cancel-in-progress: true
 
 jobs:
   build:
